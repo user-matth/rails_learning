@@ -60,3 +60,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gem 'pry'
 # gem 'pry-byebug'
 # gem 'pry-rescue', '~> 1.4.5'
+gem 'devise'
+gem 'mailcatcher'
