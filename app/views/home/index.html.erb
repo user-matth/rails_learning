@@ -1,0 +1,7 @@
+<% if !user_signed_in? %>
+    <%= render "not_signed_in_home" %>
+<% end %>
+
+<% if user_signed_in? %>
+    <%= render "signed_in_home" %>
+<% end %>

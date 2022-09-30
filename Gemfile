@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.5', '>= 6.0.5.1'
@@ -60,9 +60,24 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry', '>= 0.10.4'
 gem 'pry-byebug', '>= 3.4.2'
 gem 'pry-rescue', '>= 1.4.5'
+gem 'rack', '~> 2.0'
+gem 'bootstrap', '~> 5.2.1'
+
+group :development, :test do
+  gem 'guard-livereload', '~> 2.5', require: false
+end
+
+group :development do
+ gem 'guard'
+ gem 'guard-zeus'
+ gem 'rack-livereload'
+end
+
+gem 'clipboard-rails'
+gem 'jquery-rails'
 
 # Devise
 gem 'devise'
 
 # MailCatcher
-gem 'mailcatcher', '0.2.4'
+# gem 'mailcatcher', '~> 0.6.1'

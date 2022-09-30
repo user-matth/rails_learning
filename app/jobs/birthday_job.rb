@@ -6,4 +6,4 @@ class BirthdayJob < ApplicationJob
       SendBirthdayJob.perform_later(user.id)
     end
   end
-end
+end 

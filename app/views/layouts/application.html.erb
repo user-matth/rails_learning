@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsLearning</title>
+    <title>Ruby on Rails | RoR</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="icon" type="image/png" href="https://global.discourse-cdn.com/rubyonrails/optimized/1X/bc68acbc8c022726e69f980e00d6811212d9378d_2_32x32.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <% unless current_page?(user_session_path) || current_page?(new_user_session_path)  || current_page?(new_user_registration_path)  || current_page?(user_registration_path)  || current_page?(new_user_password_path)%>
+      <%= render "layouts/site/navbar" %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
