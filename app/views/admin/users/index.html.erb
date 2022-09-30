@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <p style="color: green"><%= notice %></p>
+
+  <h1 class="serif mb-4">Users</h1>
+
+  <div id="users" class="mt-3">
+    <% @users.each do |user| %>
+    <div class="d-flex justify-content-between mt-2">
+      <%= render user %>
+      <p>
+        <%= link_to "Show this user", [:admin, user], :class => 'btn-LIGHT-BLUE' %>
+      </p>
+    </div>
+    <% end %>
+  </div>
+
+  <%= link_to "+ New user", new_admin_user_path, :class => 'btn-DARK-BLUE' %>
+</div>

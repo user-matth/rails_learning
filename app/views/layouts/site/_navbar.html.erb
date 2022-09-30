@@ -1,18 +1,41 @@
-<nav class="py-2 bg-light border-bottom w-100">
-    <div class="container d-flex flex-wrap">
-      <ul class="nav me-auto">
-        <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active fw-bold" aria-current="page">Rails Project</a></li>
-        <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
-        <% if user_signed_in? %>
-          <%= link_to "Sidekiq", sidekiq_web_path, :class => "nav-item nav-link link-dark px-2" %>
-        <% end %>
-      </ul>
-      <ul class="nav">        
-        <% if user_signed_in? %> 
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "nav-item nav-link link-dark px-2" %>
-        <% else %>
-            <%= link_to "Login", new_user_session_path, :class => "nav-item nav-link link-dark px-2" %>
-        <% end %>
-      </ul>
-    </div>
-</nav>
+<div style="position: sticky; top: 0; z-index: 999999;">
+  <nav class="py-1 w-100" style="background-color:#081B4B;">
+      <div class="container d-flex flex-wrap align-items-center justify-content-between">
+        <p class="serif text-white m-0" style="font-size:14px">
+          Hello there! Make sure you have an admin account for real access. Learn more
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+          </svg>
+        </p>
+        
+        <%= link_to "Support", sidekiq_web_path, :class => "nav-item nav-link link-dark px-2" %>
+
+        <p class="serif text-white m-0" style="font-size:14px">
+          Get Support 
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+          </svg>
+        </p>
+      </div>
+  </nav>
+  <nav class="py-2 bg-light border-bottom w-100">
+      <div class="container d-flex flex-wrap">
+        <ul class="nav me-auto">
+          <li class="nav-item"><a href="<%= root_path %>" class="nav-link link-dark px-2 active fw-bold" aria-current="page">Rails Project</a></li>
+          <li class="nav-item"><a href="<%= root_path %>" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
+          <% if user_signed_in? %>
+            <%= link_to "Sidekiq", sidekiq_web_path, :class => "nav-item nav-link link-dark px-2" %>
+            <%= link_to "Users", admin_users_url, :class => "nav-item nav-link link-dark px-2" %>
+          <% end %>
+        </ul>
+        <ul class="nav">        
+          <% if user_signed_in? %> 
+              <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "nav-item nav-link btn-DARK-BLUE" %>
+          <% else %>
+              <%= link_to "Login", new_user_session_path, :class => "nav-item nav-link link-dark px-2 me-3" %>
+              <%= link_to "Sign in", new_user_registration_path, :class => "nav-item nav-link btn-LIGHT-BLUE" %>
+          <% end %>
+        </ul>
+      </div>
+  </nav>
+</div>

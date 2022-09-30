@@ -1,25 +1,51 @@
-<div class="container d-flex flex-wrap mt-5 flex-column" >
-    <h1 class="serif">First Things First</h1>
-    <p>Run this to start redis server for a perfect running application with Sidekiq.</p>
-    <div class="d-flex">
+<div class="container d-flex flex-wrap mt-5 flex-column justify-content-between" >
 
-        <p class="code me-3" style="width:21rem;" id="#p1">sudo service redis-server start</p>
+    <div class="d-flex justify-content-start flex-column">
+        <h1 class="serif">First Things First</h1>
+        <h3 class="serif mt-4">Start Redis</h3>
+        <p>Run this to start redis server for a perfect running application with Sidekiq.</p>
+        <div class="d-flex">
+            <p class="code m-0 w-25" style="height: 2.8rem;">sudo service redis-server start</p>
+        </div>
+    </div>
 
-        <button_to class="btn btn-WHITE" onclick="copyToClipboard('#p1')" style="margin-bottom:1rem;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00247C" class="bi bi-clipboard" viewBox="0 0 16 16">
-                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-            </svg>
-        <button_to>
+    <div class="d-flex justify-content-end align-items-end flex-column">
+        <h3 class="serif">Connect to Redis</h3>
+        <p>You can test that your Redis server is running by connecting with the Redis CLI:</p>
+        <div class="d-flex code w-25 flex-column" style="height: 7.4rem;">
+            <p class="" >
+            redis-cli
+            </p>
+            <p class="" >
+            127.0.0.1:6379> ping    
+            </p>
+            <p class="" >
+            PONG
+            </p>
+        </div>
+    </div>
+    
+    <h4 class="serif mt-3">You can solve your doubts by yourself at <a href="https://redis.io/docs/getting-started/installation/install-redis-on-windows/" aria-current="page">Redis CLI</a>.</h4>
+
+    <div class="card mt-4" style="height: 265px;">
+        <div class="card-body d-flex flex-column" style="height: 226px;">
+            <h2 class="serif mb-3">Simple, efficient background processing for Ruby.</h2>
+            <p class="serif mb-3" style="font-size:16px!important; width: 50%;">Sidekiq uses threads to handle many jobs at the same time in the same process. It does not require Rails but will integrate tightly with Rails to make background processing dead simple.</p>
+            <p class="serif fw-bold" style="font-size:16px!important;">
+                <a href="https://github.com/mperham/sidekiq" class="text-white">
+                    View the docs
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                    </svg>
+                </a>
+            </p>
+            
+            <%= image_tag("https://www.digitalocean.com/_next/static/media/cloudJourneyImage.954519ea.svg", {:style => "z-index: 22; position: relative; top: -124px; left: 704px; width: 557px;"}) %>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column align-items-center justify-content-center" style="margin: 5rem 0">
+        <h1 class="serif fw-bold">Have any idea to improve here?</h1>
+        <h5 class="serif mt-3">Get in touch with me by an email or something like that.</h5>
     </div>
 </div>
-
-<script>
-    function copyToClipboard(element) {
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val($(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
-    }
-</script>

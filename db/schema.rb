@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_26_163837) do
+ActiveRecord::Schema.define(version: 2022_09_30_170529) do
+
+  create_table "banners", force: :cascade do |t|
+    t.boolean "active"
+    t.integer "order"
+    t.string "name"
+    t.string "image"
+    t.string "resume"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

@@ -4,10 +4,19 @@
 
 body {
     width      : 100%;
-    height     : 100vh;
+    min-height     : 100vh;
     margin     : 0;
     padding    : 0;
     font-family: 'Inter', sans-serif !important;
+}
+
+p{
+    font-size: 14px!important;
+}
+
+a{
+    text-decoration: none!important;
+    color: #0069FF;
 }
 
 .serif {
@@ -19,14 +28,32 @@ body {
     font-family: 'JetBrains Mono', monospace !important;
     padding: .75rem 1rem;
     background-color: #00247C;
-    color: #FFFF;
+    color: #F9FAFE;
     box-shadow: 0px 0px 0px;
     border-radius: 10px;
 }
 
-.btn-WHITE{
-    background-color:#e5e5e5!important;
+.btn-LIGHT-BLUE{
+    background-color: #0069FF;
+    color: #F9FAFE!important;
+    font-weight: bold!important;
     border-radius: 10px!important;
+    padding: .5rem 1rem;
+    text-decoration: none;
+}
+.btn-LIGHT-BLUE:hover{
+    background-color: #002C9B;
+}
+.btn-DARK-BLUE{
+    background-color: #002C9B;
+    color: #F9FAFE!important;
+    font-weight: bold!important;
+    border-radius: 10px!important;
+    padding: .5rem 1rem;
+    text-decoration: none;
+}
+.btn-DARK-BLUE:hover{
+    background-color: rgb(0, 0, 0);
 }
 .form-signin {
     max-width: 330px;
@@ -71,4 +98,33 @@ body {
     flex-direction : column;
     align-items    : center;
     justify-content: center;
+    background-image: url("https://ui-cdn.digitalocean.com/registration/e79a24c/static/media/new-brand-bg.2dc399f21f810914b7ca.png");
+
+    /* Set a specific height */
+    height: 337px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card{
+    background-color: rgb(0, 44, 155)!important;
+    border-radius: 24px!important;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    padding: 32px 40px 5px 64px;
+    border: 0!important;
+}
+
+.card-body{
+    color: #F9FAFE!important;
+}
+
+.textDarkBlue{
+    color: #00247C;
 }

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @banner.active %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @banner.order %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @banner.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @banner.image %>
+</p>
+
+<p>
+  <strong>Resume:</strong>
+  <%= @banner.resume %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @banner.description %>
+</p>
+
+<%= link_to 'Edit', edit_banner_path(@banner) %> |
+<%= link_to 'Back', banners_path %>
