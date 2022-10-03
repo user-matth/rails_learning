@@ -1,5 +1,3 @@
-​![My Remote Image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FRuby_on_Rails&psig=AOvVaw1hhOC0Xkc6oKAzJ3MwIRRX&ust=1664653044099000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIiKnP6hvfoCFQAAAAAdAAAAABAD)
-
 # Rails Background Job
 
 This is a personal project which the main purpuse is learning how can we use background jobs between Redis, Sidekiq and Active Job with Ruby on Rails
