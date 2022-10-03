@@ -1,0 +1,50 @@
+<div class="container mt-5">
+  <%= form_with(model: [:admin, @contact]) do |form| %>
+    <% if @contact.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+        <ul>
+          <% contact.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="field col">
+        <%= form.label :status %>
+        <%= form.number_field :status, :class => 'form-control mb-3' %>
+      </div>
+      <div class="field col">
+        <%= form.label :phone %>
+        <%= form.text_field :phone, :class => 'form-control mb-3' %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, :class => 'form-control mb-3' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email, :class => 'form-control mb-3' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :subject %>
+      <%= form.text_field :subject, :class => 'form-control mb-3' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :summary %>
+      <%= form.text_area :summary, :class => 'form-control mb-3' %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit :class => "btn-DARK-BLUE border-0", :style => "float: right;" %>
+    </div>
+  <% end %>
+</div>

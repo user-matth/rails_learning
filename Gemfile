@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby "3.1.2"
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.0.5', '>= 6.0.5.1'
+# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem "rails", "~> 7.0.3", ">= 7.0.3.1"
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
@@ -12,7 +13,8 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~>3.0'
+gem 'psych', '< 4'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -60,7 +62,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry', '>= 0.10.4'
 gem 'pry-byebug', '>= 3.4.2'
 gem 'pry-rescue', '>= 1.4.5'
-gem 'rack', '~> 2.0'
 gem 'bootstrap', '~> 5.2.1'
 
 group :development, :test do
@@ -77,7 +78,8 @@ gem 'clipboard-rails'
 gem 'jquery-rails'
 
 # Devise
-gem 'devise'
+gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
+gem 'devise', '~> 4.8', '>= 4.8.1'
 
 # MailCatcher
-# gem 'mailcatcher', '~> 0.6.1'
+gem 'mailcatcher'

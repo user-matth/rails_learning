@@ -1,0 +1,12 @@
+<div class="container-xxl mt-5 ">
+  <p style="color: green"><%= notice %></p>
+
+  <%= render @contacts %>
+
+  <div class="d-flex">
+    <%= link_to "Edit this contact", edit_admin_contact_path(@contacts), :class => "btn-DARK-BLUE me-3" %>
+    <%= link_to "Back to contacts", admin_contacts_path, :class => "btn-LIGHT-BLUE me-3" %>
+
+    <%= button_to "Destroy this contact", [:admin, @contacts], method: :delete, :class => 'btn btn-danger' %>
+  </div>
+</div>

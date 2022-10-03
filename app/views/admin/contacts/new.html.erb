@@ -1,0 +1,11 @@
+<div class="container mt-5">
+    <h1 class="serif">New Contact</h1>
+
+    <div class="row">
+        <%= render 'form', contact: [:admin, @contact] %>
+        <div style="padding: 0px 12px;">
+            <%= link_to '<- Back', admin_contacts_path, :class => "btn-LIGHT-BLUE w-auto" %>
+        </div>
+    </div>
+
+</div>

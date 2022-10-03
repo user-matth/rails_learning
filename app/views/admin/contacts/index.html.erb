@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="serif mb-3">Contacts</h1>
+
+  <div class="card_DFLT">
+    <table>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Subject</th>
+          <th>Summary</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @contacts.each do |contact| %>
+          <tr>
+            <td><%= contact.status %></td>
+            <td><%= contact.name %></td>
+            <td><%= contact.phone %></td>
+            <td><%= contact.email %></td>
+            <td><%= contact.subject %></td>
+            <td><%= contact.summary %></td>
+            <td class="text-center"><%= link_to 'Show', [:admin, contact], :class => "btn-outline-light btn" %></td>
+            <td class="text-center"><%= link_to 'Edit', edit_admin_contact_path(contact), :class => "btn-outline-light btn" %></td>
+            <td class="text-center"><%= link_to 'Destroy', [:admin, contact], method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn-outline-light btn" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <br>
+
+  <%= link_to '+ New Contact', new_admin_contact_path, :class => "btn-DARK-BLUE" %>
+</div>

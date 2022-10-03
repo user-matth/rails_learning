@@ -3,23 +3,20 @@
     <div class="d-flex justify-content-start flex-column">
         <h1 class="serif">First Things First</h1>
         <h3 class="serif mt-4">Start Redis</h3>
-        <p>Run this to start redis server for a perfect running application with Sidekiq.</p>
+        <p>Run this to start Redis server for a perfect running application with Sidekiq.</p>
         <div class="d-flex">
-            <p class="code m-0 w-25" style="height: 2.8rem;">sudo service redis-server start</p>
+            <input type="text" value="sudo service redis-server start" id="copyFunction" class="code m-0 border-0" style="width: 21rem;">
+            <button onclick="copyFunction()" class="btn-WHITE ms-3">Copy</button>
         </div>
     </div>
 
     <div class="d-flex justify-content-end align-items-end flex-column">
         <h3 class="serif">Connect to Redis</h3>
         <p>You can test that your Redis server is running by connecting with the Redis CLI:</p>
-        <div class="d-flex code w-25 flex-column" style="height: 7.4rem;">
+        <div class="d-flex code w-25 flex-column" style="height: 5.4rem;">
             <p class="" >
-            redis-cli
-            </p>
-            <p class="" >
-            127.0.0.1:6379> ping    
-            </p>
-            <p class="" >
+            redis-cli</br>
+            127.0.0.1:6379> ping</br>
             PONG
             </p>
         </div>
@@ -48,4 +45,15 @@
         <h1 class="serif fw-bold">Have any idea to improve here?</h1>
         <h5 class="serif mt-3">Get in touch with me by an email or something like that.</h5>
     </div>
+</div>
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+    <strong class="me-auto">Successfully Copied!</strong>
+    <small>just now</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" onclick="unDisplayToast()"></button>
+  </div>
+  <div class="toast-body">
+    Wow, you just copied the text!
+  </div>
 </div>
